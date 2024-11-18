@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Create an account to share your thoughts, explore ideas, and connect with others.">
+
+    <title>syark app </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+    <header class="fixed top-0 flex flex-col left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Brand -->
+            <a href="#" class="text-xl  font-bold text-gray-800">Syark</a>
+           
+
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">About</a></li>
+                    <li class="relative group">
+                        <span class="text-gray-700 hover:text-blue-500 cursor-pointer">Services</span>
+                        <!-- Dropdown -->
+                        <ul class="absolute left-0 hidden bg-white border border-gray-200 rounded-lg shadow-md mt-2 group-hover:block">
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SEO</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bg-zinc-200  flex flex-col justify-between w-full min-h-screen  my-9 py-10 h-[50px] ">
+      
+      
+            <div class="absolute flex-col items-center bg-zinc-100 w-[340px] h-[510px]   ml-[300px] ">
+                <h2 class="flex items-center text-black text-4xl font-medium px-8 my-5">Create Account </h2>
+               
+            <form action="/register" method="post" class="flex flex-col my-5 ml-4" >
+                <input class="my-1 text-1xl px-3 py-2 w-[300px] outline-none bg-zinc-100 border-[1px] border-gray-600 rounded-md " type="text" placeholder="name" name="name">
+                <input class="my-1 text-1xl px-3 py-2 w-[300px] outline-none bg-zinc-100 border-[1px] border-gray-600 rounded-md "type="text" placeholder="username" name="username">
+                <input class="my-1 text-1xl px-3 py-2 w-[300px] outline-none bg-zinc-100 border-[1px] border-gray-600 rounded-md"type="password" placeholder="password" name="password">
+                <input class="my-1 text-1xl px-3 py-2 w-[300px] outline-none bg-zinc-100 border-[1px] border-gray-600 rounded-md"type="email" placeholder="email" name="email">
+                <input class="my-1 text-1xl px-3 py-2 w-[300px] outline-none bg-zinc-100 border-[1px] border-gray-600 rounded-md" type="number" placeholder="age" name="age">
+                <input  class="px-3 text-2xl mt-7 py-2 w-[300px] bg-blue-500  rounded-md" type="submit" value="Create" href="login">
+                <ul class="flex justify-center">
+                    <li>alredy having having account</li>
+                    <a class="ml-4  text-blue-500 relative my-0" href="login">login</a>
+                </ul>
+
+
+                
+            </form>
+           
+        </div>
+        <div class="fixed right-4 z-50 shadow-md flex flex-col space-y-4">
+            <!-- Custom Button Template -->
+            <a href="#facebook" class="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full shadow-lg text-white hover:bg-blue-500">
+                <!-- Facebook Icon -->
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.628 3.875 10.35 9.101 11.647v-7.98h-2.474V16H13.1v-1.58c0-4.085 1.849-5.978 5.859-5.978.76 0 2.072.15 2.608.298v3.325c-.283-.03-.775-.045-1.386-.045-1.967 0-2.728.745-2.728 2.683V16h3.92l-.673 3.667h-3.247v8.245C23.395 27.195 28 22.135 28 16"></path>
+                </svg>
+            </a>
+    
+            <!-- LinkedIn Button -->
+            <a href="#linkedin" class="flex items-center justify-center w-12 h-12 bg-blue-800 rounded-full shadow-lg text-white hover:bg-blue-700">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M6.227 12.61h4.19v13.48h-4.19zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187z"></path>
+                </svg>
+            </a>
+    
+            <!-- Pinterest Button -->
+            <a href="#pinterest" class="flex items-center justify-center w-12 h-12 bg-red-500 rounded-full shadow-lg text-white hover:bg-red-400">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M15.995 4C9.361 4 4 9.37 4 15.995c0 5.084 3.16 9.428 7.622 11.176-.109-.948-.198-2.41.039-3.446.217-.938 1.402-5.963 1.402-5.963s-.356-.72-.356-1.777c0-1.668.968-2.912 2.172-2.912 1.027 0 1.52.77 1.52 1.688 0 1.027-.65 2.567-.996 3.998-.287 1.195.602 2.172 1.777 2.172 2.132 0 3.771-2.25 3.771-5.489 0-2.873-2.063-4.877-5.015-4.877-3.416 0-5.42 2.557-5.42 5.203 0 1.027.395 2.132.888 2.735a.36.36 0 0 1 .08.345c-.09.375-.297 1.195-.336 1.363-.05.217-.178.266-.405.158-1.481-.711-2.409-2.903-2.409-4.66 0-3.781 2.745-7.257 7.928-7.257 4.156 0 7.394 2.962 7.394 6.931 0 4.137-2.606 7.464-6.22 7.464-1.214 0-2.36-.632-2.744-1.383l-.75 2.854c-.267 1.046-.998 2.35-1.491 3.149a12 12 0 0 0 3.554.533C22.629 28 28 22.63 28 16.005 27.99 9.37 22.62 4 15.995 4"></path>
+                </svg>
+            </a>
+        </div>
+    
+       
+    
+
+
+
+       
+            <div class=" absolute top-10 flex flex-col   w-[340px] my-9 ml-[641px] min-h-screen">
+                 <img class="w-full  " src="https://images.pexels.com/photos/459335/pexels-photo-459335.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" >
+                 <h1 class="absolute top-[350px] left-[10px] text-2xl font-bold text-white">Bring Your ideas life</h1>
+                 <span class="absolute top-[400px] left-[10px] text-2xl text-white">bring your thoughts and Share your mind thoughts and happiness</span>
+                
+                </div>
+           
+        </div>
+      
+ 
+
+
+</div>
+
+    
+</body>
+</html>

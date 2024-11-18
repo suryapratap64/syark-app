@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syark app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto flex items-center justify-between px-4 md:px-8 py-4">
+            <a href="#" class="text-xl font-bold text-gray-800">Syark</a>
+            <nav>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">About</a></li>
+                    <li class="relative group">
+                        <span class="text-gray-700 hover:text-blue-500 cursor-pointer">Services</span>
+                        <ul class="absolute left-0 hidden bg-white border border-gray-200 rounded-lg shadow-md mt-2 group-hover:block">
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Design</a></li>
+                            <a class="bg-red-500 rounded-md w-20 text-sm inline-block   mt-0 px-3 py-2 " href="/logout">logout</a>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SEO</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Marketing</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Postingweb app</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+                    <li>  <a class="text-gray-700 hover:text-red-500" href="/logout">logout</a></li>
+                </ul>
+                <!-- Mobile Menu -->
+                <button class="md:hidden text-gray-800 focus:outline-none" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <ul id="mobile-menu" class="hidden flex-col space-y-2 mt-4 md:hidden">
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">About</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Services</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+                    
+                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+ <div class="mt-9 relative w-full min-h-screen bg-zinc-100 text-black p-10">
+  
+
+    <div class="fixed  right-4 z-50 shadow-md  space-y-4">
+        <!-- Custom Button Template -->
+        <a href="#facebook" class="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full shadow-lg text-white hover:bg-blue-500">
+            <!-- Facebook Icon -->
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.628 3.875 10.35 9.101 11.647v-7.98h-2.474V16H13.1v-1.58c0-4.085 1.849-5.978 5.859-5.978.76 0 2.072.15 2.608.298v3.325c-.283-.03-.775-.045-1.386-.045-1.967 0-2.728.745-2.728 2.683V16h3.92l-.673 3.667h-3.247v8.245C23.395 27.195 28 22.135 28 16"></path>
+            </svg>
+        </a>
+
+        <!-- LinkedIn Button -->
+        <a href="#linkedin" class="flex items-center justify-center w-12 h-12 bg-blue-800 rounded-full shadow-lg text-white hover:bg-blue-700">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M6.227 12.61h4.19v13.48h-4.19zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187z"></path>
+            </svg>
+        </a>
+
+        <!-- Pinterest Button -->
+        <a href="#pinterest" class="flex items-center justify-center w-12 h-12 bg-red-500 rounded-full shadow-lg text-white hover:bg-red-400">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M15.995 4C9.361 4 4 9.37 4 15.995c0 5.084 3.16 9.428 7.622 11.176-.109-.948-.198-2.41.039-3.446.217-.938 1.402-5.963 1.402-5.963s-.356-.72-.356-1.777c0-1.668.968-2.912 2.172-2.912 1.027 0 1.52.77 1.52 1.688 0 1.027-.65 2.567-.996 3.998-.287 1.195.602 2.172 1.777 2.172 2.132 0 3.771-2.25 3.771-5.489 0-2.873-2.063-4.877-5.015-4.877-3.416 0-5.42 2.557-5.42 5.203 0 1.027.395 2.132.888 2.735a.36.36 0 0 1 .08.345c-.09.375-.297 1.195-.336 1.363-.05.217-.178.266-.405.158-1.481-.711-2.409-2.903-2.409-4.66 0-3.781 2.745-7.257 7.928-7.257 4.156 0 7.394 2.962 7.394 6.931 0 4.137-2.606 7.464-6.22 7.464-1.214 0-2.36-.632-2.744-1.383l-.75 2.854c-.267 1.046-.998 2.35-1.491 3.149a12 12 0 0 0 3.554.533C22.629 28 28 22.63 28 16.005 27.99 9.37 22.62 4 15.995 4"></path>
+            </svg>
+        </a>
+    </div>
+   
+       
+
+ <div class=" flex container items-center   gap-3">
+    <div class="w-10 h-10  rounded-md overflow-hidden">
+        <img class="w-full h-full object-cover" src="/images/uploads/<%= user.profilepic%>" alt="">
+    </div>
+        
+    <h2 class="text-3xl "><span class="font-light"></span><%=user.name  %> </h2>
+
+ </div class="w-full">
+
+        <h5 class="mb-5 text-2xl">Share your thoughts</h5>
+        <form method="post" action="/post" >
+            <textarea placeholder="what's on your mind"  class="w-full md:w-1/3 bg-gray-200 p-6 rounded-lg shadow-md" name="content" id=""></textarea>
+            <ul class="flex display-center flex-wrap">
+                <input class="px-3 w-1/8 py-2 bg-blue-500 block rounded-md text-1xl mt-4" type="submit"  value="Create new post">
+                <a class="px-3 w-1/8 py-2  bg-yellow-500 block rounded-md text-1xl mt-4" href="http://localhost:3000/profile/upload">upload profie photo</a>
+                <a class="px-3 w-1/8 py-2  bg-yellow-500 block rounded-md text-1xl mt-4" href="http://localhost:3000/profile/posts">see all posts</a>
+            </ul>
+           
+           
+        </form>
+        <div class=" posts mt-10">
+            <h3 class="flex flex-col text-zinc-400">Your posts</h3>
+            <div class="w-full md:w-2/3  p-6 rounded-lg ">
+                <%user.posts.reverse().forEach(function(post){
+                    %>
+                    <div class="w-full md:w-2/3 my-2  bg-gray-200 p-7 rounded-lg shadow-md ">
+                        <div class=" flex flex-x mx-2">
+                            <div class="w-10 h-10  rounded-md bg-gray-200 overflow-hidden">
+                                <img class="w-full h-full object-cover" src="/images/uploads/<%= user.profilepic%>" alt="">
+                            </div>
+                            <h4 class="text-blue-500 my-2 ">@<%=user.username%></h4>
+                        </div>
+                       
+                        <p class="text-1xl tracking-tight "><%=post.content%></p>
+                        <small class="mt-2 inline-block"> <%=post.likes.length%>likes</small>
+                        <div class="btns flex gap-4 mt-2" >
+                        
+                            <a class="text-blue-400" href="/like/<%=post._id%>">
+                                <%=post.likes.indexOf(user._id)===-1 ?"Like" :"Unlike"%>
+                            </a>
+                            <a class="text-zinc-500" href="/edit/<%=post._id%>">edit</a>
+                        </div>
+    
+                    </div>
+
+
+                    <%
+                })%>
+            </div>
+            
+            
+            
+
+        </div>
+
+</div>
+</div>
+
+    
+</body>
+<script>
+    // Mobile Menu Toggle Script
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+</html>

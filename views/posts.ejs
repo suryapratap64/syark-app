@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Syark app</title>
+</head>
+<body class="flex ">
+    <h1 class="text-2xl  flex justify-center font-bold   mb-4">All Posts</h1>
+    <a 
+    href="/profile" 
+    class=" mt-1 fixed right-4 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+    Go to Profile
+</a>
+    <div class="w-full md:w-2/3 p-6 rounded-lg bg-gray-100 shadow-lg">
+        <% posts.forEach(post => { %>
+            <div class="w-full my-2 bg-gray-200 p-7 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <!-- User Profile Picture -->
+                    <div class="w-10 h-10 rounded-md overflow-hidden bg-gray-200 mr-4">
+                        <img 
+                            class="w-10 h-10 rounded-md overflow-hidden bg-gray-200 mr-4" 
+                            src="/images/uploads/<%= post.user.profilepic %>" 
+                            alt="<%= post.user.username %>'s Profile Picture"
+                        >
+                    </div>
+                    <!-- Username -->
+                    <h4 class="text-blue-500 font-medium">@<%= post.user.username %></h4>
+                </div>
+                <!-- Post Content -->
+                <p class="text-lg tracking-tight mb-2"><%= post.content %></p>
+                <!-- Likes Count -->
+                <small class="block text-gray-600 mb-2"><%= post.likes.length %> likes</small>
+                <!-- Buttons -->
+                <div class="btns flex gap-4">
+                    <a 
+                        class="text-blue-400 hover:text-blue-600" 
+                        href="/like/<%= post._id %>">
+                        <%= post.likes.indexOf(user._id) === -1 ? "Like" : "Unlike" %>
+                    </a>
+                    <% if (post.user._id.toString() === user._id.toString()) { %>
+                        <a 
+                            class="text-zinc-500 hover:text-zinc-700" 
+                            href="/edit/<%= post._id %>">
+                            Edit
+                        </a>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+   
+   
+    
+</body>
+</html>

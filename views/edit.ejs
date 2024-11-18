@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syark app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full min-h-screen bg-zinc-600 text-white p-10">
+        <div class="w-full flex justify-end">
+            <a class="bg-red-500 rounded-md  text-sm inline-block mb-5 px-3 py-2 " href="/logout">logout</a>
+
+ </div>
+        
+     
+        <h5 class="mb-5">edit your post</h5>
+        <form method="post" action="/update/<%=post._id%>">
+            <textarea placeholder="what's on your mind" class="resize-none bg-transparent  border-2 border-zinc-800 rounded-md" name="content" id=""><%=post.content%></textarea>
+            <input class="px-3 wt-40 py-2 bg-yellow-500 text-black block rounded-md text-sm " type="submit"  value="Update post">
+        </form>
+       
+
+</div>
+    
+</body>
+</html>
